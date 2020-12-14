@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		CB85BA3F2587DA78004E34D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85BA3E2587DA78004E34D0 /* AppDelegate.swift */; };
 		CB85BA412587DA78004E34D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85BA402587DA78004E34D0 /* SceneDelegate.swift */; };
-		CB85BA432587DA78004E34D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85BA422587DA78004E34D0 /* ViewController.swift */; };
+		CB85BA432587DA78004E34D0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85BA422587DA78004E34D0 /* LoginViewController.swift */; };
 		CB85BA482587DA7A004E34D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB85BA472587DA7A004E34D0 /* Assets.xcassets */; };
 		CB85BA4B2587DA7A004E34D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB85BA492587DA7A004E34D0 /* LaunchScreen.storyboard */; };
 		CB85BA562587DA7B004E34D0 /* iddogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85BA552587DA7B004E34D0 /* iddogTests.swift */; };
 		CB85BA612587DA7B004E34D0 /* iddogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85BA602587DA7B004E34D0 /* iddogUITests.swift */; };
+		CB85BA7D2587DCB1004E34D0 /* TemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85BA7C2587DCB1004E34D0 /* TemplateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,7 @@
 		CB85BA3B2587DA78004E34D0 /* iddog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iddog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB85BA3E2587DA78004E34D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB85BA402587DA78004E34D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CB85BA422587DA78004E34D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CB85BA422587DA78004E34D0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CB85BA472587DA7A004E34D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB85BA4A2587DA7A004E34D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB85BA4C2587DA7A004E34D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		CB85BA5C2587DA7B004E34D0 /* iddogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iddogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB85BA602587DA7B004E34D0 /* iddogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iddogUITests.swift; sourceTree = "<group>"; };
 		CB85BA622587DA7B004E34D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB85BA7C2587DCB1004E34D0 /* TemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +99,10 @@
 		CB85BA3D2587DA78004E34D0 /* iddog */ = {
 			isa = PBXGroup;
 			children = (
+				CB85BA7B2587DC70004E34D0 /* Property Wrapper */,
+				CB85BA742587DC1D004E34D0 /* Login Screen */,
 				CB85BA3E2587DA78004E34D0 /* AppDelegate.swift */,
 				CB85BA402587DA78004E34D0 /* SceneDelegate.swift */,
-				CB85BA422587DA78004E34D0 /* ViewController.swift */,
 				CB85BA472587DA7A004E34D0 /* Assets.xcassets */,
 				CB85BA492587DA7A004E34D0 /* LaunchScreen.storyboard */,
 				CB85BA4C2587DA7A004E34D0 /* Info.plist */,
@@ -123,6 +126,46 @@
 				CB85BA622587DA7B004E34D0 /* Info.plist */,
 			);
 			path = iddogUITests;
+			sourceTree = "<group>";
+		};
+		CB85BA742587DC1D004E34D0 /* Login Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CB85BA772587DC37004E34D0 /* Model */,
+				CB85BA762587DC32004E34D0 /* View */,
+				CB85BA752587DC2C004E34D0 /* ViewModel */,
+			);
+			path = "Login Screen";
+			sourceTree = "<group>";
+		};
+		CB85BA752587DC2C004E34D0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CB85BA762587DC32004E34D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB85BA422587DA78004E34D0 /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB85BA772587DC37004E34D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CB85BA7B2587DC70004E34D0 /* Property Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				CB85BA7C2587DCB1004E34D0 /* TemplateView.swift */,
+			);
+			path = "Property Wrapper";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,7 +297,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB85BA432587DA78004E34D0 /* ViewController.swift in Sources */,
+				CB85BA7D2587DCB1004E34D0 /* TemplateView.swift in Sources */,
+				CB85BA432587DA78004E34D0 /* LoginViewController.swift in Sources */,
 				CB85BA3F2587DA78004E34D0 /* AppDelegate.swift in Sources */,
 				CB85BA412587DA78004E34D0 /* SceneDelegate.swift in Sources */,
 			);
