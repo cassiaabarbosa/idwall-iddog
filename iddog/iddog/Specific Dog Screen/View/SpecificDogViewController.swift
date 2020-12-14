@@ -33,13 +33,14 @@ final class SpecificDogViewController: UIViewController {
 		setupImageName()
 		
 	}
-	
+	// MARK: Setup `dog` component.
+	/// Configures `dog` attributes, such as content mode.
 	private func setupDogAttributes() {
 		view.addSubview(dog)
 		dog.contentMode = .scaleAspectFill
 	}
 	
-	// MARK: Constraints
+	/// Configures `dog` constraints on view.
 	private func setupDogConstraints() {
 		NSLayoutConstraint.activate([
 			dog.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
@@ -49,6 +50,7 @@ final class SpecificDogViewController: UIViewController {
 		])
 	}
 	
+	/// Configures what name image is in the cell.
 	private func setupImageName() {
 		dog.contentMode = .scaleToFill
 		dog.image = UIImage(named: viewModel.name)

@@ -45,7 +45,7 @@ class DogsCollectionViewCell: UICollectionViewCell {
 		dog.layer.masksToBounds = true
 	}
 	
-	/// Configures what image name is in the cell.
+	/// Configures what name image is in the cell.
 	func setImage(name: String) {
 		self.dog.image = UIImage(named: name)
 	}
