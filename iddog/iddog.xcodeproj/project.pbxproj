@@ -15,6 +15,9 @@
 		CB85BA562587DA7B004E34D0 /* iddogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85BA552587DA7B004E34D0 /* iddogTests.swift */; };
 		CB85BA612587DA7B004E34D0 /* iddogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85BA602587DA7B004E34D0 /* iddogUITests.swift */; };
 		CB85BA7D2587DCB1004E34D0 /* TemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85BA7C2587DCB1004E34D0 /* TemplateView.swift */; };
+		CB85BA822587DDD1004E34D0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85BA812587DDD1004E34D0 /* LoginViewModel.swift */; };
+		CB85BA882587E5AC004E34D0 /* DogCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85BA872587E5AC004E34D0 /* DogCoordinator.swift */; };
+		CB85BA942587E634004E34D0 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85BA932587E634004E34D0 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		CB85BA602587DA7B004E34D0 /* iddogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iddogUITests.swift; sourceTree = "<group>"; };
 		CB85BA622587DA7B004E34D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB85BA7C2587DCB1004E34D0 /* TemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateView.swift; sourceTree = "<group>"; };
+		CB85BA812587DDD1004E34D0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CB85BA872587E5AC004E34D0 /* DogCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCoordinator.swift; sourceTree = "<group>"; };
+		CB85BA932587E634004E34D0 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,8 @@
 		CB85BA3D2587DA78004E34D0 /* iddog */ = {
 			isa = PBXGroup;
 			children = (
+				CB85BA922587E5FD004E34D0 /* Extensions */,
+				CB85BA862587E598004E34D0 /* Coordinators */,
 				CB85BA7B2587DC70004E34D0 /* Property Wrapper */,
 				CB85BA742587DC1D004E34D0 /* Login Screen */,
 				CB85BA3E2587DA78004E34D0 /* AppDelegate.swift */,
@@ -141,6 +149,7 @@
 		CB85BA752587DC2C004E34D0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CB85BA812587DDD1004E34D0 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -166,6 +175,22 @@
 				CB85BA7C2587DCB1004E34D0 /* TemplateView.swift */,
 			);
 			path = "Property Wrapper";
+			sourceTree = "<group>";
+		};
+		CB85BA862587E598004E34D0 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				CB85BA872587E5AC004E34D0 /* DogCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		CB85BA922587E5FD004E34D0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CB85BA932587E634004E34D0 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,9 +322,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB85BA942587E634004E34D0 /* UIColor+Extension.swift in Sources */,
 				CB85BA7D2587DCB1004E34D0 /* TemplateView.swift in Sources */,
+				CB85BA882587E5AC004E34D0 /* DogCoordinator.swift in Sources */,
 				CB85BA432587DA78004E34D0 /* LoginViewController.swift in Sources */,
 				CB85BA3F2587DA78004E34D0 /* AppDelegate.swift in Sources */,
+				CB85BA822587DDD1004E34D0 /* LoginViewModel.swift in Sources */,
 				CB85BA412587DA78004E34D0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
