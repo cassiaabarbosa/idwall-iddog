@@ -14,6 +14,5 @@ struct SpecificDogViewModel {
 	init( name: String) {
 		self.name = name
 	}
-
 }
 

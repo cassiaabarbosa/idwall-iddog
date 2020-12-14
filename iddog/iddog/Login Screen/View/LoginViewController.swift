@@ -247,7 +247,7 @@ extension LoginViewController: LoginDelegate {
 	
 	/// Loads `DogsViewController` when user token is authenticated.
 	func loadDogsController() {
-		self.coordinator.start(viewController: self)
+		self.coordinator.loadTabController(viewController: self)
 	}
 }
 
