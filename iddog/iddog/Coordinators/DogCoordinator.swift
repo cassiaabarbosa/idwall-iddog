@@ -9,14 +9,14 @@ import UIKit
 
 class DogCoordinator {
 	
-//	func start(viewController: UIViewController) {
-//		let tabBarController = CustomUITabBarController(coordinator: self)
-//		viewController.present(tabBarController, animated: true, completion: nil)
-//	}
+	func start(viewController: UIViewController) {
+		let tabBarController = CustomUITabBarController(coordinator: self)
+		viewController.present(tabBarController, animated: true, completion: nil)
+	}
 	
-//	func specificDog(name: String, nav: UINavigationController) {
-//		let vm = SpecificDogViewModel(name: name)
-//		let vc = SpecificDogViewController(viewModel: vm)
-//		nav.pushViewController(vc, animated: true)
-//	}
+	func specificDog(name: String, nav: UINavigationController) {
+		let vm = SpecificDogViewModel(name: name)
+		let vc = SpecificDogViewController(viewModel: vm)
+		nav.pushViewController(vc, animated: true)
+	}
 }

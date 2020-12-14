@@ -18,6 +18,12 @@
 		CB85BA822587DDD1004E34D0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85BA812587DDD1004E34D0 /* LoginViewModel.swift */; };
 		CB85BA882587E5AC004E34D0 /* DogCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85BA872587E5AC004E34D0 /* DogCoordinator.swift */; };
 		CB85BA942587E634004E34D0 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85BA932587E634004E34D0 /* UIColor+Extension.swift */; };
+		CB85BA9E2587EC1B004E34D0 /* CustomUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85BA9D2587EC1B004E34D0 /* CustomUITabBarController.swift */; };
+		CB85BAAD2587ECA2004E34D0 /* DogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85BAAC2587ECA2004E34D0 /* DogsViewController.swift */; };
+		CB85BAB62587ECC3004E34D0 /* DogsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85BAB52587ECC3004E34D0 /* DogsViewModel.swift */; };
+		CB85BABE2587FAE1004E34D0 /* SpecificDogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85BABD2587FAE1004E34D0 /* SpecificDogViewController.swift */; };
+		CB85BAC72587FBC6004E34D0 /* DogsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85BAC62587FBC6004E34D0 /* DogsCollectionViewCell.swift */; };
+		CB85BAD22587FDE1004E34D0 /* SpecificDogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85BAD12587FDE1004E34D0 /* SpecificDogViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,12 @@
 		CB85BA812587DDD1004E34D0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CB85BA872587E5AC004E34D0 /* DogCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCoordinator.swift; sourceTree = "<group>"; };
 		CB85BA932587E634004E34D0 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		CB85BA9D2587EC1B004E34D0 /* CustomUITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITabBarController.swift; sourceTree = "<group>"; };
+		CB85BAAC2587ECA2004E34D0 /* DogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsViewController.swift; sourceTree = "<group>"; };
+		CB85BAB52587ECC3004E34D0 /* DogsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsViewModel.swift; sourceTree = "<group>"; };
+		CB85BABD2587FAE1004E34D0 /* SpecificDogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificDogViewController.swift; sourceTree = "<group>"; };
+		CB85BAC62587FBC6004E34D0 /* DogsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsCollectionViewCell.swift; sourceTree = "<group>"; };
+		CB85BAD12587FDE1004E34D0 /* SpecificDogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificDogViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +117,9 @@
 		CB85BA3D2587DA78004E34D0 /* iddog */ = {
 			isa = PBXGroup;
 			children = (
+				CB85BAC22587FB94004E34D0 /* Specific Dog Screen */,
+				CB85BAA52587EC4B004E34D0 /* Dogs Screen */,
+				CB85BA9B2587EBCE004E34D0 /* TabBar */,
 				CB85BA922587E5FD004E34D0 /* Extensions */,
 				CB85BA862587E598004E34D0 /* Coordinators */,
 				CB85BA7B2587DC70004E34D0 /* Property Wrapper */,
@@ -191,6 +206,89 @@
 				CB85BA932587E634004E34D0 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CB85BA9B2587EBCE004E34D0 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CB85BA9C2587EC01004E34D0 /* View */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		CB85BA9C2587EC01004E34D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB85BA9D2587EC1B004E34D0 /* CustomUITabBarController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB85BAA52587EC4B004E34D0 /* Dogs Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CB85BAAB2587EC8D004E34D0 /* Model */,
+				CB85BAAA2587EC88004E34D0 /* View */,
+				CB85BAA92587EC80004E34D0 /* ViewModel */,
+			);
+			path = "Dogs Screen";
+			sourceTree = "<group>";
+		};
+		CB85BAA92587EC80004E34D0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CB85BAB52587ECC3004E34D0 /* DogsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CB85BAAA2587EC88004E34D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB85BAAC2587ECA2004E34D0 /* DogsViewController.swift */,
+				CB85BAC62587FBC6004E34D0 /* DogsCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB85BAAB2587EC8D004E34D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CB85BAC22587FB94004E34D0 /* Specific Dog Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CB85BAD02587FDCE004E34D0 /* Model */,
+				CB85BACF2587FDCA004E34D0 /* View */,
+				CB85BACE2587FDC1004E34D0 /* ViewModel */,
+			);
+			path = "Specific Dog Screen";
+			sourceTree = "<group>";
+		};
+		CB85BACE2587FDC1004E34D0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CB85BAD12587FDE1004E34D0 /* SpecificDogViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CB85BACF2587FDCA004E34D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB85BABD2587FAE1004E34D0 /* SpecificDogViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB85BAD02587FDCE004E34D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,11 +422,17 @@
 			files = (
 				CB85BA942587E634004E34D0 /* UIColor+Extension.swift in Sources */,
 				CB85BA7D2587DCB1004E34D0 /* TemplateView.swift in Sources */,
+				CB85BA9E2587EC1B004E34D0 /* CustomUITabBarController.swift in Sources */,
 				CB85BA882587E5AC004E34D0 /* DogCoordinator.swift in Sources */,
+				CB85BABE2587FAE1004E34D0 /* SpecificDogViewController.swift in Sources */,
 				CB85BA432587DA78004E34D0 /* LoginViewController.swift in Sources */,
 				CB85BA3F2587DA78004E34D0 /* AppDelegate.swift in Sources */,
 				CB85BA822587DDD1004E34D0 /* LoginViewModel.swift in Sources */,
+				CB85BAB62587ECC3004E34D0 /* DogsViewModel.swift in Sources */,
+				CB85BAAD2587ECA2004E34D0 /* DogsViewController.swift in Sources */,
 				CB85BA412587DA78004E34D0 /* SceneDelegate.swift in Sources */,
+				CB85BAC72587FBC6004E34D0 /* DogsCollectionViewCell.swift in Sources */,
+				CB85BAD22587FDE1004E34D0 /* SpecificDogViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

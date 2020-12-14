@@ -29,7 +29,7 @@ final class LoginViewController: UIViewController {
 	
 	let coordinator: DogCoordinator
 
-	// MARK: init
+	// MARK: init()
 	init(viewModel: LoginViewModel) {
 		self.viewModel = viewModel
 		self.changedConstraints = [[]]
@@ -68,7 +68,7 @@ final class LoginViewController: UIViewController {
 	}
 	
 	// MARK: viewWillLayoutSubviews()
-	/// This function is called when device orientation is changed. To provide a better user experience, the constraints of `credential` `UITextfField` and `login` `UIBUtton` are activated ou deactived when device is on portrait or landscape orientation.
+	/// Called when device orientation is changed. To provide a better user experience, the constraints of `credential` `UITextfField` and `login` `UIBUtton` are activated ou deactived when device is on portrait or landscape orientation.
 	override func viewWillLayoutSubviews() {
 		if UIDevice.current.orientation.isLandscape{
 			NSLayoutConstraint.deactivate(changedConstraints[0])
@@ -86,7 +86,7 @@ final class LoginViewController: UIViewController {
 	}
 	
 	// MARK: addSubviews()
-	/// This function adds all created subviews to respective views.
+	/// Adds all created subviews to respective views.
 	private func addSubviews() {
 		view.addSubview(base)
 		view.addSubview(background)
@@ -97,14 +97,14 @@ final class LoginViewController: UIViewController {
 	}
 	
 	// MARK: setting up `name` component
-	/// This function configures the `name` attributes, such as its text, text color and fonte type.
+	/// Configures the `name` attributes, such as its text, text color and fonte type.
 	private func setupNameAttributes() {
 		name.text = "IDDOG"
 		name.font = UIFont.boldSystemFont(ofSize: 50)
 		name.textColor = .white
 	}
 	
-	/// This function configures `name` constraints on view.
+	/// Configures `name` constraints on view.
 	private func setupNameConstraints() {
 		NSLayoutConstraint.activate([
 			name.centerYAnchor.constraint(equalTo: self.base.centerYAnchor),
@@ -114,23 +114,23 @@ final class LoginViewController: UIViewController {
 	}
 	
 	// MARK: setting up `View`
-	/// This function configures the base `view` background color.
+	/// Configures the base `view` background color.
 	private func setupViewAttributes() {
 		self.view.backgroundColor = .accent
 	}
 	
-	/// This function configures `base` constraints on view.
+	/// Configures `base` constraints on view.
 	private func setupBaseConstraints() {
 		NSLayoutConstraint.activate([
-			base.topAnchor.constraint(equalTo: self.view.topAnchor),
+			base.topAnchor.constraint(equalTo: view.topAnchor),
 			base.bottomAnchor.constraint(equalTo: background.topAnchor, constant: 40),
-			base.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-			base.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
+			base.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+			base.trailingAnchor.constraint(equalTo: view.trailingAnchor)
 		])
 	}
 	
 	// MARK: setting up `background` component
-	/// This function configures `background` attributes, such as its background and shadow color, cornes radius and shadow length.
+	/// Configures `background` attributes, such as its background and shadow color, cornes radius and shadow length.
 	private func setupBackgroundAttributes() {
 		background.backgroundColor = .systemGray6
 		background.layer.shadowColor = UIColor.black.cgColor
@@ -142,7 +142,7 @@ final class LoginViewController: UIViewController {
 		background.clipsToBounds = false
 	}
 	
-	/// This function configures `background` constraints on view.
+	/// Configures `background` constraints on view.
 	private func setupBackgroundConstraints() {
 		NSLayoutConstraint.activate([
 			background.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -154,7 +154,7 @@ final class LoginViewController: UIViewController {
 	}
 	
 	// MARK: setting up `credential` component
-	/// This function configures `credential` attributes, such as its background color, placeholder, keyboard and return types, correction, border and text alignment.
+	/// Configures `credential` attributes, such as its background color, placeholder, keyboard and return types, correction, border and text alignment.
 	private func setupCredentialAttributes() {
 		credential.backgroundColor = .systemGray5
 		credential.placeholder = "email@email.com"
@@ -167,8 +167,8 @@ final class LoginViewController: UIViewController {
 		credential.textAlignment = .center
 	}
 	
-	/// This function configures `credential` constraints on portrait orientation.
-	/// - return: `[NSLayoutConstraint]`
+	/// Configures `credential` constraints on portrait orientation.
+	/// - returns: `[NSLayoutConstraint]`
 	private func setupCredentialPortraitConstraints()  -> [NSLayoutConstraint]{
 		return [
 			credential.topAnchor.constraint(equalTo: background.topAnchor, constant: view.frame.size.height * 0.05),
@@ -178,8 +178,8 @@ final class LoginViewController: UIViewController {
 		]
 	}
 	
-	/// This function configures `credential` constraints on landscape orientation.
-	/// - return: `[NSLayoutConstraint]`
+	/// Configures `credential` constraints on landscape orientation.
+	/// - returns: `[NSLayoutConstraint]`
 	private func setupCredentialLandscapeConstraints()-> [NSLayoutConstraint]  {
 		return [
 			credential.topAnchor.constraint(equalTo: background.topAnchor, constant: view.frame.size.height * 0.05),
@@ -189,7 +189,7 @@ final class LoginViewController: UIViewController {
 	}
 	
 	// MARK: setting up `login` component
-	/// This function configures `login` attributes, such as its title and background color. Also adds a target.
+	/// Configures `login` attributes, such as its title and background color. Also adds a target.
 	private func setupLoginAttributes() {
 		login.layer.cornerRadius = 20
 		login.setTitle("ENTRAR", for: .normal)
@@ -197,7 +197,7 @@ final class LoginViewController: UIViewController {
 		login.addTarget(self, action: #selector(signIn), for: .touchUpInside)
 	}
 	
-	/// This function configures `login` constraints on portrait orientation.
+	/// Configures `login` constraints on portrait orientation.
 	/// - return: `[NSLayoutConstraint]`
 	private func setupLoginPortraitConstraints()  -> [NSLayoutConstraint]{
 		return [
@@ -208,7 +208,7 @@ final class LoginViewController: UIViewController {
 		]
 	}
 	
-	/// This function configures `login` constraints on landscape orientation.
+	/// Configures `login` constraints on landscape orientation.
 	/// - return: `[NSLayoutConstraint]`
 	private func setupLoginLandscapeConstraints()-> [NSLayoutConstraint]  {
 		return [
@@ -219,13 +219,13 @@ final class LoginViewController: UIViewController {
 	}
 	
 	// MARK: activityViewConstraints()
-	/// This funcion configures `activityView` constraints on View.
+	/// Configures `activityView` constraints on View.
 	func activityViewConstraints() {
 		self.activityView.center = view.center
 	}
 	
 	// MARK: @objc
-	/// This function is called when `login` button is pressed.
+	/// Called when `login` button is pressed.
 	@objc func signIn() {
 		self.activityView.startAnimating()
 		_ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
@@ -238,18 +238,16 @@ final class LoginViewController: UIViewController {
 
 // MARK: LoginDelegate
 extension LoginViewController: LoginDelegate {
-	/// This function send an alert when user token cannot be authenticated.
+	/// Sends an alert when user token cannot be authenticated.
 	func erroringLoadDogs() {
 		let alert = UIAlertController(title: "Erro", message: "Não foi possível autenticar o usuário. Tente novamente.", preferredStyle: .alert)
 		alert.addAction(UIAlertAction(title: "Fechar", style: UIAlertAction.Style.default, handler: { _ in}))
 		self.present(alert, animated: true, completion: nil)
 	}
 	
-	/// This function send an alert when user token is authenticated.
+	/// Loads `DogsViewController` when user token is authenticated.
 	func loadDogsController() {
-//		self.coordinator.start(viewController: self)
-		print("bateu")
-		
+		self.coordinator.start(viewController: self)
 	}
 }
 
